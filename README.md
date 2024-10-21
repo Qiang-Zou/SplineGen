@@ -5,9 +5,8 @@
 - Webpage: https://qiang-zou.github.io/
 - Latest Release: 2024.10.21
 
-
 ## !important
-The source code was developed as a byproduct of the projects and methods presented in [1,2]. 
+The source code was developed as a byproduct of the projects and methods presented in [1,2]. It promotes a new CAD modeling paradigm---data-driven, generative B-spline modeling---focusing on parameterization and knot placement for approximating unorganized points. The core principle is to replace manual heuristics with data-driven insights, enhancing modeling accuracy, efficiency, and robustness.
 
 It can be run with Pytorch 2.0.1 + CUDA 11.8 on the operating system Ubuntu 22.04 LTS. Windows, Mac.
 
