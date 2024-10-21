@@ -1,11 +1,4 @@
 class AverageMeter(object):
-  """
-  Computes and stores the average and current value
-
-  Adapted from pointer-networks-pytorch by ast0414:
-    https://github.com/ast0414/pointer-networks-pytorch
-  """
-
   def __init__(self):
     self.vals = []
     self.ns = []

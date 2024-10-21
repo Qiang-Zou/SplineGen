@@ -1,6 +1,3 @@
-'''
-  in this version, the decoder is also used to predict the param
-'''
 import os
 import datetime
 from tqdm import tqdm
@@ -147,10 +144,6 @@ def train(data_path,model_save_path,log_path,knot_model_load_path,train_weights=
               batch_knots=input['knots_expanded'].to(device)
               batch_knots_mask=input['knots_mask_expanded'].to(device)
 
-              # knots,knots_mask,log_pointer_scores, pointer_argmaxs,params = model(
-              #     batch_points,batch_mask, batch_lengths,
-              #     batch_labels,batch_knots[:,:-1],batch_knots_mask[:,:-1],half_eval=True
-              # )
               knots,knots_mask,log_pointer_scores, pointer_argmaxs,params = model(
                   batch_points,batch_params,batch_mask, batch_lengths,
                   batch_labels,batch_knots[:,:-1],batch_knots_mask[:,:-1]

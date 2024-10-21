@@ -34,29 +34,6 @@ def NoisedEqualChordLenSamplingParamsCpp3D(c:curve.BSplineCurve,revolution:int=1
 
 from geomdl import BSpline
 
-# def curveGradientVariation(curve:BSplineCurve,samples=1000,given_list=None,
-#                           parameter_generator=EqualChordLenSamplingParams):
-#     crv=BSpline.Curve()
-#     crv.degree=curve.degree
-#     crv.ctrlpts=curve.control_pts.tolist()
-#     crv.knotvector=curve.knot_vector
-    
-#     if given_list is not None:
-#         param_list_=given_list
-#     else:
-#         param_list_=parameter_generator(curve,size=samples)[0]
-            
-#     param_list=np.sort(param_list_)
-       
-#     # param_list=np.sorted(param_list_)
-
-#     ders=[crv.derivatives(u,order=1) for u in param_list]
-#     ders=np.array(ders)[:,1,:]
-#     der_variation=np.var(ders,axis=0)
-#     der_variation=np.sum(der_variation)
-
-#     return der_variation
-    
 def curveGradientVariation(curve:BSplineCurve,samples=1000,given_list=None,
                           parameter_generator=EqualChordLenSamplingParams):
     crv=BSpline.Curve()

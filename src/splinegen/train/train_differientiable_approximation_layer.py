@@ -1,6 +1,3 @@
-'''
-  in this version, the decoder is also used to predict the param
-'''
 from util import nurbs_eval
 from typing import Tuple, Union, Optional
 import os

@@ -1,6 +1,3 @@
-'''
-  in this version, the decoder is also used to predict the param
-'''
 from typing import Tuple, Union, Optional
 from util.curveSampling2D import EqualChordLenSamplingParams,NoisedEqualChordLenSamplingParamsMulti,NoisedEqualChordLenSamplingParamsCpp,curveGradientVariation
 import util.approximation as approximation
@@ -27,7 +24,6 @@ def eval(data_path,model_load_path,use_cuda=True,n_workers=4,batch_size=256):
     dataset=CurveDataset(data_path,use_points_params=True,use_knots=True,use_orders=True,
                           random_select_rate=None)
 
-    # train_dataset,val_dataset,test_set=random_split(dataset=dataset,lengths=(0.8,0.1,0.1))
     test_set=dataset
 
     val_loader = DataLoader(test_set, batch_size=batch_size,

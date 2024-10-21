@@ -1,10 +1,3 @@
-# train_kpn.py
-"""
-    This version of kpn does use param infos
-    And use discrete value
-
-    Mean while, using a seperate encoder
-"""
 from util.statistic import AverageMeter
 import torch
 import models.encoder_decoder
@@ -18,12 +11,9 @@ from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 from torch.nn.functional import one_hot
 import datetime
-# from dataset.discreteKnots import DiscreteKnots,KNOT_TOKENS
-# from dataset.curveDatasetDiscrete import CurveDiscreteDataset,KNOT_TOKENS
 from dataset.curveDataset_for_encoder import CurveDataset_for_encoder
 from torch.utils.data import random_split
 
-# if __name__ == '__main__':
 def train(data_path,log_dir,model_save_dir):
     # token_size=256
     dataset = CurveDataset_for_encoder(

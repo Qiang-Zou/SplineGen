@@ -1,10 +1,3 @@
-# train_kpn.py
-"""
-    This version of kpn does use param infos
-    And use discrete value
-
-    Mean while, using a seperate encoder
-"""
 from util.statistic import AverageMeter
 import torch
 from torch.utils.data import DataLoader, TensorDataset
@@ -15,7 +8,6 @@ from tqdm import tqdm
 from sklearn.model_selection import train_test_split
 from torch.nn.functional import one_hot
 import datetime
-# from dataset.discreteKnots import DiscreteKnots,KNOT_TOKENS
 from dataset.curveDataset import CurveDataset
 from torch.utils.data import random_split
 import train.getModel as getModel

@@ -17,9 +17,6 @@ def gen_curve_all3d(save_path,num_base=10000,insert_times=4,num_noise_layers=10,
                     #    paramter_generator=curve.EqualChordLengthParameterGenerator,
                      num_ctrl_pts_min=4,num_ctrl_pts_max=8,min_samples=50,max_samples=100,
                      ctrl_pts_generator=curve.MovingCenterControlPointsGenerator):
-    '''
-        Corresponding to dataset/curveDataset2.py
-    '''
     parent_path=fdir(save_path)
     if parent_path and not path.exists(parent_path):
         os.makedirs(parent_path)
