@@ -34,12 +34,6 @@ def train(data_path,log_dir,model_save_path,base_model_load_path,use_cuda=True,n
 
     writer = SummaryWriter(log_dir=log_dir+'/'+datetime.datetime.now().strftime("%Y%m%d-%H%M%S"))
 
-
-    print('-----------------')
-    print('-----------------')
-    print('-----------------')
-    print('-----------------')
-
     torch.random.manual_seed(231)
     
     dataset=CurveDataset(data_path,use_points_params=True,use_knots=True,use_orders=True,

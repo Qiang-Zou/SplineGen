@@ -156,7 +156,7 @@ def getSplineGen(device='cuda',model_load_path='',base_model_load_path='',input_
 
      base_model=getModel_SimpleEncoder_Knots(device=device,model_load_path=base_model_load_path,input_dim=input_dim) 
 
-     additional_model=models.additioanl_layer.AdditionalLayer(3).to(device)
+     additional_model=models.additioanl_layer.AdditionalLayer(3,dimension=input_dim).to(device)
 
      model=models.encoder_decoder.SplineGen(base_model,additional_model)
 

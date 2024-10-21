@@ -20,7 +20,7 @@ def gen_curve_all2d(save_path,num_base=10000,insert_times=4,num_noise_layers=10,
         Corresponding to dataset/curveDataset2.py
     '''
     parent_path=fdir(save_path)
-    if not path.exists(parent_path):
+    if parent_path and not path.exists(parent_path):
         os.makedirs(parent_path)
 
     generator=curve.BSplineCurveGenerator(degree=degree,dimension=dimension,knot_vector_generator=curve.UniformNonPeriodicKnotVectorGenerator,
@@ -154,7 +154,7 @@ def gen_curve_all2d(save_path,num_base=10000,insert_times=4,num_noise_layers=10,
     print(f'done: total {len(points_len)} curves')
 
 def gen2d():
-    save_path='output/data/2d_curve_50w'
+    save_path='2d_curve_50w.npz'
     gen_curve_all2d(save_path=save_path,num_base=10000,num_noise_layers=10,num_sample_times=1,num_ctrl_pts_min=4,num_ctrl_pts_max=8,insert_times=4,min_samples=30,max_samples=50)
 
 if __name__=='__main__':

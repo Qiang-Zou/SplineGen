@@ -21,7 +21,7 @@ def gen_curve_all3d(save_path,num_base=10000,insert_times=4,num_noise_layers=10,
         Corresponding to dataset/curveDataset2.py
     '''
     parent_path=fdir(save_path)
-    if not path.exists(parent_path):
+    if parent_path and not path.exists(parent_path):
         os.makedirs(parent_path)
 
     generator=curve.BSplineCurveGenerator(degree=degree,dimension=dimension,knot_vector_generator=curve.UniformNonPeriodicKnotVectorGenerator,

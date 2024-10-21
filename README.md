@@ -31,12 +31,14 @@ It can be run with Pytorch 2.0.1 + CUDA 11.8 on the operating system Ubuntu 22.0
     ```shell
     conda env create -f environment.yml
     conda activate splinegen
+    # install geomdl with pip
+    pip install geomdl
     ```
 
 - To create the dataset, a curve intersection detect module is also needed installed.
 
     ```shell
-    cd src/ops/3d_intersect_detect
+    cd ops/3d_intersect_detect
     pip install .
     ```
 

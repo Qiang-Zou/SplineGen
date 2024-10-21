@@ -4,11 +4,11 @@ import torch
 
 class AdditionalLayer(nn.Module):
 
-    def __init__(self,degree):
+    def __init__(self,degree,dimension=3):
         super().__init__()
         self.degree=degree
-        self.finetune=TunableLayer(input_dim=4,d_model=512,nhead=4,num_decoder_layers=3,num_encoder_layers=3,dim_feedforward=2048,dropout=0.01,p=3,max_knots_len=30,max_seq_len=30)
-        self.finetune2=TunableLayer(input_dim=1,tgt_input_dim=4,d_model=512,nhead=4,num_decoder_layers=3,num_encoder_layers=3,dim_feedforward=2048,dropout=0.01,p=3,max_knots_len=30,max_seq_len=30)
+        self.finetune=TunableLayer(input_dim=dimension+1,d_model=512,nhead=4,num_decoder_layers=3,num_encoder_layers=3,dim_feedforward=2048,dropout=0.01,p=3,max_knots_len=30,max_seq_len=30)
+        self.finetune2=TunableLayer(input_dim=1,tgt_input_dim=dimension+1,d_model=512,nhead=4,num_decoder_layers=3,num_encoder_layers=3,dim_feedforward=2048,dropout=0.01,p=3,max_knots_len=30,max_seq_len=30)
         # self.finetune2=PPNFineTune(input_dim=1,head=False,tgt_input_dim=3,d_model=256,nhead=4,num_decoder_layers=4,num_encoder_layers=4,dim_feedforward=1024,dropout=0.01,p=3,max_knots_len=30,max_seq_len=30)
         
     def forward(self,points,params,points_mask,knots,knots_mask):
@@ -99,10 +99,7 @@ class TunableLayer(nn.Module):
 
         # src (batch_size*max_seq_len*(3+2)) -> (batch_size*max_seq_len*d_model)
         src = self.embedding(src)  # Apply embedding
-        # src = self.pos_encoder(src)
-        # tgt (batch_size*max_knots_len) -> (batch_size*max_knots_len,1) -> (batch_size*max_knots_len*d_model)
-        # tgt = torch.unsqueeze(tgt, -1)
-        # tgt (batch_size*max_knots_len*3) -> (batch_size*max_knots_len*d_model)
+
         tgt = self.embedding_tgt(tgt)
         # tgt = self.pos_encoder(tgt)
 
