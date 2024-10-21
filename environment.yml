@@ -1,0 +1,20 @@
+name: splinegen
+channels:
+  - lambouj
+  - pytorch
+  - nvidia
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.10.9
+  - geomdl==5.3.1
+  - matplotlib==3.7.0
+  - numpy==1.21.3
+  - pybind11==2.11.1
+  - scikit-learn==1.2.1
+  - scipy==1.10.1
+  - setuptools=65.6.3
+  - torch==2.0.1+cu118
+  - torchvision==0.16.0a0+b78d98b
+  - tqdm==4.62.3
