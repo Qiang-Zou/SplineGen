@@ -5,7 +5,7 @@
 - Webpage: https://qiang-zou.github.io/
 - Latest Release: 2024.10.21
 
-<img align="left" width="2000" height="1000" src="splinegen.png"> 
+<img align="left" src="splinegen.png"> 
 
 ## !important
 The source code was developed as a byproduct of the projects and methods presented in [1,2]. It promotes a new CAD modeling paradigm---data-driven, generative B-spline modeling---focusing on parameterization and knot placement for approximating unorganized points. The core principle is to replace manual heuristics with data-driven insights, enhancing modeling accuracy, efficiency, and robustness.
