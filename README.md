@@ -24,7 +24,7 @@ It can be run with Pytorch 2.0.1 + CUDA 11.8 on the operating system Ubuntu 22.0
 ----------
 
 - The source code can be downloaded from: [https://github.com/Qiang-Zou/SplineGen](https://github.com/Qiang-Zou/SplineGen)
-  
+- The dataset can be downloaded from: [https://github.com/sgb1084864985/SplinegenDataset](https://github.com/sgb1084864985/SplinegenDataset)
 
 3.Installing (Windows/Linux/Mac + Pytorch 2.0.1 + CUDA 11.8)
 -------------------------------------------
@@ -76,6 +76,5 @@ It can be run with Pytorch 2.0.1 + CUDA 11.8 on the operating system Ubuntu 22.0
 
 5.References
 -------------
-
 - [1] Qiang Zou, Lizhen Zhu, Jiayu Wu, and Zhijie Yang, "SplineGen: Approximating unorganized points through generative AI." Computer-Aided Design, vol.178, 103809, 2025. https://doi.org/10.1016/j.cad.2024.103809
 - [2] Qiang Zou , Yincai Wu , Zhenyu Liu , Weiwei Xu , Shuming Gao. "Intelligent CAD 2.0." Visual Informatics (2024). https://doi.org/10.1016/j.visinf.2024.10.001
